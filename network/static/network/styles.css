@@ -1,0 +1,80 @@
+html, body {
+    background-color: #384651;
+    color:white;
+}
+
+
+
+#new-post {
+    resize: none;
+    height: 7em;
+    background-color: #35373e;
+    color: white;
+}
+
+.edit-post, .edit-post:focus {
+    background-color: #35373e;
+    color: white;
+}
+
+
+.custom-logo {height: 2.5rem;}
+
+.header {
+    background-color: #35373e;
+    color: white;
+}
+
+.header-name {
+    font-size: 1.5em;
+}
+
+
+
+.post {
+    background-color: #35373e;
+    color: white;
+}
+
+.post-content {
+    font-size: 1.1em;
+}
+
+.post-meta {
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.post-link, .post-link:visited {
+    color: white;
+    text-decoration: underline;
+}
+
+.like-button {
+    cursor: pointer;
+}
+
+
+.pagination > li > button
+{
+    background-color: #007bff;
+    color: #ffffff;
+    border: 0px;
+    border-radius: 0.25rem !important;
+}
+
+.pagination > .disabled > button
+{
+    background-color: transparent !important;
+    color: transparent !important;
+}
+
+.pagination > li > button:focus,
+.pagination > li > button:hover
+{
+    background-color: #006adb;
+}
+
+.disabled.page-info > button {
+    color: white !important;
+}
