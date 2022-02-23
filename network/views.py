@@ -54,13 +54,13 @@ def profile(request, profile_id):
         'is_following': is_following
     })
 
-@login_required
+@login_required(login_url="login")
 def following(request):
     return render(request, 'network/following.html')
 
 # POST Routes
 
-@login_required
+@login_required(login_url="login")
 def post(request):
     if request.method != 'POST':
         return JsonResponse({"error": "POST request required."}, status=400)
@@ -80,7 +80,7 @@ def post(request):
     request.session['message'] = 'Successfully posted.'
     return HttpResponseRedirect(reverse('index'))
 
-@login_required
+@login_required(login_url="login")
 def follow(request, profile_id):
     # confirm user existence, else redirect to index
     try:
@@ -224,7 +224,7 @@ def serialize_posts(request, posts, pagenum):
 
 
 @csrf_exempt
-@login_required
+@login_required(login_url="login")
 def edit_post(request, post_id):
     # can only accept PUT requests
     if request.method != "PUT":
